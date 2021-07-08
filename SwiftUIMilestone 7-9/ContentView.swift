@@ -24,11 +24,13 @@ struct ContentView: View {
             }.navigationTitle(Text("GoalKeeper"))
             .navigationBarItems(trailing:
                 Button(action: {
-                    
+                self.showAddActivity.toggle()
                 }) {
                     Image(systemName: "plus")
                 }
             )
+        }.sheet(isPresented: $showAddActivity) {
+            AddActivityView(activities: self.activities)
         }
     }
 }

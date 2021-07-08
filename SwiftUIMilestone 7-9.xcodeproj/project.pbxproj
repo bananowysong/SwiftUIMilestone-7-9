@@ -12,6 +12,7 @@
 		52D9061E269770720027A09A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 52D9061D269770720027A09A /* Assets.xcassets */; };
 		52D90621269770720027A09A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 52D90620269770720027A09A /* Preview Assets.xcassets */; };
 		52D9062826977DB50027A09A /* Activity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D9062726977DB50027A09A /* Activity.swift */; };
+		52D9062A269783710027A09A /* AddActivityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D90629269783700027A09A /* AddActivityView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +22,7 @@
 		52D9061D269770720027A09A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		52D90620269770720027A09A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		52D9062726977DB50027A09A /* Activity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Activity.swift; sourceTree = "<group>"; };
+		52D90629269783700027A09A /* AddActivityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddActivityView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +58,7 @@
 				52D90619269770700027A09A /* SwiftUIMilestone_7_9App.swift */,
 				52D9061B269770700027A09A /* ContentView.swift */,
 				52D9062726977DB50027A09A /* Activity.swift */,
+				52D90629269783700027A09A /* AddActivityView.swift */,
 				52D9061D269770720027A09A /* Assets.xcassets */,
 				52D9061F269770720027A09A /* Preview Content */,
 			);
@@ -142,6 +145,7 @@
 			files = (
 				52D9062826977DB50027A09A /* Activity.swift in Sources */,
 				52D9061C269770700027A09A /* ContentView.swift in Sources */,
+				52D9062A269783710027A09A /* AddActivityView.swift in Sources */,
 				52D9061A269770700027A09A /* SwiftUIMilestone_7_9App.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
