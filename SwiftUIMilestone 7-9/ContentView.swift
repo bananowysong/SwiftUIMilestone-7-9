@@ -8,9 +8,28 @@
 import SwiftUI
 
 struct ContentView: View {
+    @ObservedObject var activities = Acitivities()
+    @State private var showAddActivity = false
+    
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        NavigationView {
+            List {
+                ForEach(activities.items) { item in
+                    HStack {
+                        Text(item.title)
+                        Spacer()
+                        Text(item.counterString)
+                    }
+                }
+            }.navigationTitle(Text("GoalKeeper"))
+            .navigationBarItems(trailing:
+                Button(action: {
+                    
+                }) {
+                    Image(systemName: "plus")
+                }
+            )
+        }
     }
 }
 
@@ -19,3 +38,5 @@ struct ContentView_Previews: PreviewProvider {
         ContentView()
     }
 }
+
+
