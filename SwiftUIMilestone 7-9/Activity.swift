@@ -7,14 +7,19 @@
 
 import Foundation
 
-struct ActivityItem: Identifiable {
+class ActivityItem: Identifiable, ObservableObject {
     var title: String
     var description: String
-    var counter: Int = 0
+    @Published var counter: Int = 0
     var counterString: String {
         String(counter)
     }
     var id = UUID()
+    
+    init(title: String, description: String) {
+        self.title = title
+        self.description = description
+    }
 }
 
 class Acitivities: ObservableObject {

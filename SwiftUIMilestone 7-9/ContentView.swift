@@ -16,9 +16,11 @@ struct ContentView: View {
             List {
                 ForEach(activities.items) { item in
                     HStack {
-                        Text(item.title)
-                        Spacer()
-                        Text(item.counterString)
+                        NavigationLink(destination: ActivityDetailView(activity: item)) {
+                            Text(item.title)
+                            Spacer()
+                            Text(String(item.counterString))
+                        }
                     }
                 }
             }.navigationTitle(Text("GoalKeeper"))

@@ -22,7 +22,7 @@ struct AddActivityView: View {
                 .navigationBarItems(trailing:
                                         Button(action: {
                     guard !title.isEmpty else { return }
-                    var item = ActivityItem(title: self.title, description: self.description)
+                    let item = ActivityItem(title: self.title, description: self.description)
                     self.activities.items.append(item)
                     self.presentationMode.wrappedValue.dismiss()
                 }) {
