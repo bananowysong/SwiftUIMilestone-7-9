@@ -8,7 +8,8 @@
 import SwiftUI
 
 struct ActivityDetailView: View {
-    @ObservedObject var activity: ActivityItem
+    @State var activity: ActivityItem
+    @ObservedObject var activities: Acitivities
     
     var body: some View {
         NavigationView {
@@ -18,16 +19,26 @@ struct ActivityDetailView: View {
                 Text(activity.counterString)
                 Stepper("Tasks completed", onIncrement: {
                     self.activity.counter += 1
+                    if let firstIndex = self.activities.items.firstIndex(where: { item in item.id == self.activity.id }) {
+                        self.activities.items[firstIndex] = self.activity
+                    } else {
+                        fatalError()
+                    }
                 }, onDecrement: {
                     self.activity.counter -= 1
+                    if let firstIndex = self.activities.items.firstIndex(where: { item in item.id == self.activity.id }) {
+                        self.activities.items[firstIndex] = self.activity
+                    } else {
+                        fatalError()
+                    }
                 })
             }
         }
     }
 }
 
-struct ActivityDetailView_Previews: PreviewProvider {
-    static var previews: some View {
-        ActivityDetailView(activity: ActivityItem(title: "test", description: "test"))
-    }
-}
+//struct ActivityDetailView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        ActivityDetailView(activity: ActivityItem(title: "test", description: "test"))
+//    }
+//}
